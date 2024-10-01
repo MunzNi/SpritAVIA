@@ -1,0 +1,13 @@
+version: '3'
+services:
+  avia_scraper:
+    build: .
+    container_name: avia_scraper
+    environment:
+      - MQTT_BROKER=${MQTT_BROKER}
+      - MQTT_PORT=${MQTT_PORT}
+      - MQTT_TOPIC=${MQTT_TOPIC}
+      - MQTT_USERNAME=${MQTT_USERNAME}
+      - MQTT_PASSWORD=${MQTT_PASSWORD}
+      - AVIA_URL=${AVIA_URL}
+      - CRON_SCHEDULE=${CRON_SCHEDULE}
